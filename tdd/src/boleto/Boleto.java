@@ -3,11 +3,15 @@ package boleto;
 public class Boleto {
 	private String codigo;
 	private String data;
-	private float valorPago;
+	private double valorPago;
 	
-	public Boleto(String codigo, String data, float valorPago) {
-		codigo = codigo;
-		data = data;
-		valorPago = valorPago;
+	public Boleto(String c, String d, double vp) {
+		codigo = c;
+		data = d;
+		valorPago = vp;
+	}
+	
+	public double getValorPago() {
+		return valorPago;
 	}
 }
