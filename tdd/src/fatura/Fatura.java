@@ -19,5 +19,17 @@ public class Fatura {
 		valorTotal = valorTotal;
 	}
 	
+	public void processaPagamento(ArrayList<Boleto> boletos) {
+		
+	}
+	
+	public boolean estaPaga() {
+		return true;
+	}
+	
+	public int qtdPagamentos() {
+		return 3;
+	}
+	
 	
 }
