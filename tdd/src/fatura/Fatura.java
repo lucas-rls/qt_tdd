@@ -40,7 +40,7 @@ public class Fatura {
 	}
 	
 	public int qtdPagamentos() {
-		return 3;
+		return pagamentos.size();
 	}
 	
 	

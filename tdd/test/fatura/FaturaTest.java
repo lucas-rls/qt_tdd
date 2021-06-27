@@ -55,4 +55,21 @@ public class FaturaTest {
 				() -> assertEquals(3, fatura.qtdPagamentos())
 				);
 	}
+	
+	@Test
+	public void testProcessamento3() {
+		fatura = new Fatura("27/06/2021", "Lucas", 2000.00);
+		Boleto boleto1 = new Boleto("123", "27/06/2021", 500.00);
+		Boleto boleto2 = new Boleto("124", "27/06/2021", 400.00);
+		boletos = new ArrayList();
+		boletos.add(boleto1);
+		boletos.add(boleto2);
+		
+		fatura.processaPagamento(boletos);
+		
+		assertAll("processamento3",
+				() -> assertFalse(fatura.estaPaga()),
+				() -> assertEquals(2, fatura.qtdPagamentos())
+				);
+	}
 }
