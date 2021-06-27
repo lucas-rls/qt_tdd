@@ -5,9 +5,9 @@ public class Boleto {
 	private String data;
 	private float valorPago;
 	
-	public Boleto(String codigo, String data) {
+	public Boleto(String codigo, String data, float valorPago) {
 		codigo = codigo;
 		data = data;
-		valorPago = 0;
+		valorPago = valorPago;
 	}
 }
